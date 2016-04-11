@@ -1,5 +1,30 @@
 <template name="main">
+ {{#if currentUser}}
+  {{> sidebar}}
+  {{> yield}}
     <main>
-      {{> yield}}
+      <!--{{> navbar}}-->
     </main>
+    {{else}}
+    {{> yield}}
+  {{/if}}
+</template>
+
+<template name="sidebar">
+	<div id="sidebar">
+		<div id="profile">
+			<div class="image">
+				<img src="profile/profile.jpg" class="profile-pic">
+			</div>
+			<div class="name">
+				John Doe
+			</div>
+			<hr/>
+			<li class="menu"><a href="#">Dashboard</a></li>
+			<li class="menu"><a href="#">Operators</a></li>
+			<li class="menu"><a href="#">Taxi</a></li>
+			<li class="menu"><a href="#">Reports</a></li>
+			<li class="menu"><a href="#">Settings</a></li>
+		</div>
+	</div>
 </template>
