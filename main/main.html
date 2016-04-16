@@ -1,17 +1,21 @@
 <template name="main">
  {{#if currentUser}}
+ <div id="wrapper">
   {{> sidebar}}
-    <main style="margin-left: 200px;">
- 	 {{> yield}}
-    </main>
+     <div id="page-content-wrapper">
+        <div class="container-fluid">
+ 	 		{{> yield}}
+ 	 	</div>
+ 	 </div>
+ </div>
     {{else}}
     {{> yield}}
   {{/if}}
 </template>
 
 <template name="sidebar">
-	<div id="sidebar">
-		<div id="profile">
+	<div id="sidebar-wrapper">
+		<div id="profile" class="sidebar-nav">
 			<div class="image">
 				<img src="profile/profile.jpg" class="profile-pic">
 			</div>
@@ -19,9 +23,9 @@
 				John Doe
 			</div>
 			<hr/>
-			<li class="menu"><a href="#">Dashboard</a></li>
-			<li class="menu"><a href="#">Operators</a></li>
-			<li class="menu"><a href="#">Taxi</a></li>
+			<li class="menu"><a href="/dashboard">Dashboard</a></li>
+			<li class="menu"><a href="/operators">Operators</a></li>
+			<li class="menu"><a href="/taxis">Taxi</a></li>
 			<li class="menu"><a href="#">Reports</a></li>
 			<li class="menu"><a href="#">Settings</a></li>
 		</div>

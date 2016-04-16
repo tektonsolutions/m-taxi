@@ -1,0 +1,47 @@
+<template name="dashboard">
+<div class="row">
+	<div class="col-sm-12 col-md-7" style="margin-top: 30px;">
+		<div class="card">
+				<table class="table">
+					<thead>
+						<tr>
+							<td>DRIVER</td>
+							<td>CHECK IN TIME</td>
+							<td>CURRENT TAXI</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Junjun</td>
+							<td>3:00 pm July 5, 2016</td>
+							<td>P23-52D</td>
+						</tr>
+						<tr>
+							<td>Junjun</td>
+							<td>3:00 pm July 5, 2016</td>
+							<td>P23-52D</td>
+						</tr>
+					</tbody>
+				</table>
+		</div>
+	</div>
+	<div class="col-sm-12 col-md-5" style="margin-top: 30px;">
+		<form class="card">
+		  <h1>CHECK IN</h1>
+		  <div class="form-group">
+		    <label for="operatorInput">OPERATOR</label>
+		    <input type="text" class="form-control" id="operatorInput" placeholder="Plate">
+		  </div>
+		  <div class="form-group">
+		    <label for="taxiInput">TAXI NO.</label>
+		    <input type="text" class="form-control" id="taxiInput" placeholder="Taxi">
+		  </div>
+		  <div class="form-group">
+		    <label for="odoInput">ODO READING</label>
+		    <input type="number" class="form-control" id="odoInput" placeholder="ODO">
+		  </div>
+		  <button type="submit" class="btn btn-primary">CREATE</button>
+		</form>
+	</div>
+</div>
+</template>

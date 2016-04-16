@@ -1,14 +1,83 @@
-#sidebar{
-	width: 200px;
-	background-color: rgb(223,179,87);
-	height: 100%;
-	border-right: 5px solid rgb(92,147,141);
-	position: absolute;
+/* Toggle Styles */
 
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    height: 100%;	
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+	overflow: hidden;
+	background-color: rgb(223,179,87);
+	border-right: 5px solid rgb(92,147,141);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    margin-right: -250px;
+}
+
+
+@media(min-width:978px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
 }
 #profile{
 	padding-top: 50px;
+	padding-left: 0px;
 	color: rgb(255, 241, 212);
+	list-style: none;
+}
+#profile li{
+	text-indent: 20px;
 }
 .profile-pic{
 	width: 75px;
@@ -26,6 +95,7 @@
 	vertical-align: middle;
 	text-align: center;
 }
+
 hr{
 	border-color: rgb(243, 204, 123);
 	border-width: 1px;
@@ -44,9 +114,6 @@ hr{
 .menu a:hover{
 	text-decoration: none;
 	background-color: rgb(224, 189, 116);
-}
-main{
-	width: calc(100% - 200px);
 }
 td{
 	text-align: center;
