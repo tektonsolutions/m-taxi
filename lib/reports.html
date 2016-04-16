@@ -1,0 +1,54 @@
+<template name="reports">
+	<div class="col-sm-12" style="margin-top: 30px;">
+			<div class="card">
+				<div class="row">
+					<div class="pull-left" >
+					<form class="form-inline">
+					  <div class="form-group">
+					    <label for="fromInput">DATE FROM: </label>
+						<input type="date" class="form-control" id="fromInput"  placeholder="DATE FROM" />
+					    <label for="toInput">DATE TO: </label>
+						<input type="date" class="form-control" id="toInput"  placeholder="DATE FROM" />
+					  </div>
+					</form>
+					</div>
+					<div class="pull-right">
+						<button class="btn-primary btn">EXPORT</button>
+						<button class="btn-primary btn">PRINT</button>
+					</div>
+				</div>
+				<div class="row" style="margin-top: 30px;">
+					<table class="table">
+						<thead>
+							<tr>
+								<td>OPERATOR</td>
+								<td>CHECKED IN</td>
+								<td>CHECKED OUT</td>
+								<td>DIST RUN</td>
+								<td>RENTAL</td>
+								<td>PENALTY</td>
+								<td>REOD GAS REFILL</td>
+								<td>GAS REFILL</td>
+								<td>RENTAL PAID</td>
+								<td>TAXI PLATE</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Junjun</td>
+								<td>5:00 am, 13/05/06</td>
+								<td>8:00 pm, 13/05/06</td>
+								<td>1203 kms</td>
+								<td>200.00</td>
+								<td>300.00</td>
+								<td>300.00</td>
+								<td>Yes</td>
+								<td>500.00</td>
+								<td>ODZ-235</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+</template>

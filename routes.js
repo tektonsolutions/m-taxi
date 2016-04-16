@@ -21,3 +21,4 @@ Router.route("/add-operator");
 Router.route("/taxis");
 Router.route("/add-taxi");
 Router.route("/dashboard");
+Router.route("/reports");
