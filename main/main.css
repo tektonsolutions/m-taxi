@@ -1,8 +1,9 @@
 #sidebar{
 	width: 200px;
 	background-color: rgb(223,179,87);
-	min-height: 100vh;
+	height: 100%;
 	border-right: 5px solid rgb(92,147,141);
+	position: absolute;
 
 }
 #profile{
@@ -38,6 +39,7 @@ hr{
 	display: block;
 	line-height: 40px;
 	color:rgb(255, 241, 212);
+	letter-spacing: 2px;
 }
 .menu a:hover{
 	text-decoration: none;
@@ -45,4 +47,7 @@ hr{
 }
 main{
 	width: calc(100% - 200px);
+}
+td{
+	text-align: center;
 }

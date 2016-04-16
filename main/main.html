@@ -1,9 +1,8 @@
 <template name="main">
  {{#if currentUser}}
   {{> sidebar}}
-  {{> yield}}
-    <main>
-      <!--{{> navbar}}-->
+    <main style="margin-left: 200px;">
+ 	 {{> yield}}
     </main>
     {{else}}
     {{> yield}}

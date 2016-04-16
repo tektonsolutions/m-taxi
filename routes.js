@@ -15,3 +15,8 @@ Router.route("/", {
   //   }
   // }
 });
+
+Router.route("/operators");
+Router.route("/add-operator");
+Router.route("/taxis");
+Router.route("/add-taxi");
