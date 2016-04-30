@@ -1,8 +1,20 @@
 if(Meteor.isClient){
-  Meteor.loginWithPassword("admin", "admin");
+  // Meteor.loginWithPassword("admin", "admin");
+  Template.main.helpers({
+    currentUser: function() {
+      return Meteor.userId();
+    }
+  });
+  Template.sidebar.events({
+    'click #logout': function() {
+      Meteor.logout();
+      Router.go("/");
+    }
+  })
+
 }
 
-if(Meteor.isServer){
+if(Meteor.isServer){  
   Accounts.onCreateUser(function(options, user) {
     user.softDelete = false;
     if (options.profile)
@@ -27,6 +39,12 @@ if(Meteor.isServer){
         checkIn: "06:00",
         checkOut:"22:00",
         ratio: 1});
+    } 
+    if(Types.find().count() === 0){
+      Types.insert({
+        type:'new',
+        rental:500
+      });
     }
   });
 }

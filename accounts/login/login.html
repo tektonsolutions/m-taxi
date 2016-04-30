@@ -3,12 +3,13 @@
     you can substitue the span of reauth email for a input with the email and
     include the remember me checkbox
     -->
+    {{> BootstrapAlerts}} 
     <div class="container">
         <div class="card card-container">
             <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
             <form class="form-signin">
                 <span id="reauth-email" class="reauth-email"></span>
-                <input type="username" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
+                <input type="username" id="inputEmail"  class="form-control" placeholder="Username" required autofocus>
                 <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
                 <div id="remember" class="checkbox">
                     <label>
@@ -19,4 +20,9 @@
             </form><!-- /form -->
         </div><!-- /card-container -->
     </div><!-- /container -->
+    <script type="text/javascript">
+          Alerts.add(error.reason, 'danger', {
+                fadeIn: 1000, fadeOut: 1000, autoHide: 3000
+            });
+    </script>
 </template>

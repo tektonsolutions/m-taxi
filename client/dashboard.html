@@ -2,7 +2,7 @@
 <div class="row">
 	<div class="col-sm-12 col-md-7" style="margin-top: 30px;">
 		<div class="card">
-				<table class="table">
+				<table class="table table-bordered table-hover">
 					<thead>
 						<tr>
 							<td>DRIVER</td>
@@ -11,7 +11,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr data-toggle="modal" data-target="#exampleModal">
+						<tr data-toggle="modal" data-target="#driverModal">
 							<td>Junjun</td>
 							<td>3:00 pm July 5, 2016</td>
 							<td>P23-52D</td>
@@ -45,12 +45,12 @@
 	</div>
 </div>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+<div class="modal fade" id="driverModal" tabindex="-1" role="dialog" aria-labelledby="driverModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+        <h4 class="modal-title" id="driverModalLabel">New message</h4>
       </div>
       <div class="modal-body">
         <form>
@@ -65,8 +65,8 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Checkout</button>
+        <button type="button" class="btn btn-primary">Settle</button>
       </div>
     </div>
   </div>
