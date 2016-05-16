@@ -11,7 +11,7 @@ if(Meteor.isClient){
       Router.go("/");
     }
   })
-
+  Meteor.subscribe('taxis');
 }
 
 if(Meteor.isServer){

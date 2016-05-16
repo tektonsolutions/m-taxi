@@ -7,5 +7,5 @@ Meteor.publish("types", function(){
 });
 
 Meteor.publish("taxis", function(){
-  return Taxis.find({createdBy: Meteor.userId()});
+  return Taxis.find({createdBy: this.userId});
 });

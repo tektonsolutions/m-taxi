@@ -19,16 +19,17 @@
 						</tr>
 					</thead>
 					<tbody>
+						{{#each taxi}}
 						<tr>
-
-							<td>P23-52D</td>
-							<td>P23</td>
-							<td>Honda</td>
-							<td>Vios</td>
-							<td>Automatic</td>
-							<td>123,886</td>
-							<td>Junjun</td>
+							<td>{{plateNo}}</td>
+							<td>{{taxiNo}}</td>
+							<td>{{brand}}</td>
+							<td>{{variant}}</td>
+							<td>{{type}}</td>
+							<td>{{currentOdo}}</td>
+							<td>{{year}}</td>
 						</tr>
+						{{/each}}
 
 					</tbody>
 				</table>
@@ -66,8 +67,8 @@
 			    <input type="text" class="form-control" id="variantInput" placeholder="Variant">
 			  </div>
 			  <div class="form-group">
-			    <label for="yeartInput">Year</label>
-			    <input type="number" class="form-control" id="yeartInput" placeholder="Year">
+			    <label for="yearInput">Year</label>
+			    <input type="number" class="form-control" id="yearInput" placeholder="Year">
 			  </div>
 			  <button type="btn" class="btn btn-danger">REMOVE</button>
 			  <button type="submit" class="btn btn-primary">CREATE</button>

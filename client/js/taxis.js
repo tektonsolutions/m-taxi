@@ -12,6 +12,8 @@ Template.addTaxi.events({
     Meteor.call('createTaxi', taxiObj);
    }
 });
-Template.addTaxi.helpers({
-
+Template.taxis.helpers({
+    'taxi':function(){
+        return Taxis.find({});
+    }
 });
