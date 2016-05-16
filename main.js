@@ -14,7 +14,7 @@ if(Meteor.isClient){
 
 }
 
-if(Meteor.isServer){  
+if(Meteor.isServer){
   Accounts.onCreateUser(function(options, user) {
     user.softDelete = false;
     if (options.profile)
@@ -39,7 +39,7 @@ if(Meteor.isServer){
         checkIn: "06:00",
         checkOut:"22:00",
         ratio: 1});
-    } 
+    }
     if(Types.find().count() === 0){
       Types.insert({
         type:'new',
@@ -52,11 +52,11 @@ if(Meteor.isServer){
 Meteor.myFunctions = {
   isAdmin: function(){
     var currentUser = Meteor.userId();
-    if(!userId){
+    if(!currentUser){
       return false;
     }
 
-    if(Roles.userIsInRole(userId, roles.admin.key)){
+    if(Roles.userIsInRole(currentUser, roles.admin.key)){
       return true;
     } else {
       return false;

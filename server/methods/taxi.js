@@ -1,7 +1,9 @@
 Taxis._ensureIndex({plateNo: 1}, {unique: 1});
 
 Meteor.methods({
-  createTaxi: function(object){
+  'createTaxi': function(object){
+
+      console.log('create:'+object.plateNo);
     if(Meteor.myFunctions.isAdmin()){
       try {
         Taxis.insert(object);
