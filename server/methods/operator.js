@@ -1,23 +1,17 @@
-Taxis._ensureIndex({plateNo: 1}, {unique: 1});
 
 Meteor.methods({
-  'createTaxi': function(object){
-
-    check(object, Schema.Taxi);
+  'createOperator': function(object){
     if(Meteor.myFunctions.isAdmin()){
       try {
-        Taxis.insert(object);
+        Drivers.insert(object);
       } catch(e) {
-        if(e.toString().indexOf("plateNo") > - 1){
-          throw new Meteor.Error("duplicate-plateNo", "Plate number is already taken.");
-        }
       }
     }
   },
-  updateTaxi: function(currentId, object){
+  updateOperator: function(currentId, object){
     if(Meteor.myFunctions.isAdmin()){
       try{
-        Taxis.update({"_id": currentId}, {$set: {
+        Operators.update({"_id": currentId}, {$set: {
           "plateNo": object.plateNo,
           "taxiNo": object.taxiNo,
           "type": object.type,
@@ -33,9 +27,9 @@ Meteor.methods({
       }
     }
   },
-  deleteTaxi: function(currentId){
+  deleteOperator: function(currentId){
     if(Meteor.myFunctions.isAdmin()){
-      Taxis.remove({"_id":currentId, "createdBy": Meteor.userId()});
+      Operators.remove({"_id":currentId, "createdBy": Meteor.userId()});
     }
   }
 });

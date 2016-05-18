@@ -4,7 +4,8 @@ if(Meteor.isClient){
       event.preventDefault();
       var username = $("[type=username]").val();
       var password = $("[type=password]").val();
-      console.log(username);
+      var validator = $("form").validate();
+      var valid = $("form").valid();
       Meteor.loginWithPassword(username, password, function(error){
         if(error){
           if(error.reason == "User not found"){
