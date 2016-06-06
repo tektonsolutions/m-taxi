@@ -10,9 +10,7 @@ Template.addOperator.events({
       operatorObj['password'] = $('#passwordInput').val();
       var roles = [$('#positionInput').val()];
       operatorObj['profile'] = userProfileObj;
-
-      Accounts.createUser(operatorObj, function(result){
-      });
+      Meteor.call('createOperator', operatorObj);
    }
 });
 Template.addOperator.helpers({

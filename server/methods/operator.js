@@ -2,9 +2,19 @@
 Meteor.methods({
   'createOperator': function(object){
     if(Meteor.myFunctions.isAdmin()){
+      console.log(object);
       try {
-        Drivers.insert(object);
+        var userId = Accounts.createUser(object);
+        console.log(userId);
+        var user = Meteor.users.findOne({_id:userId});
+        console.log(user);
+        var driverObj = {};
+        driverObj.rentalBalance = 0;
+        driverObj.refillBalance = 0;
+        driverObj.user = user;
+        Drivers.insert(driverObj);
       } catch(e) {
+        console.log(e);
       }
     }
   },
