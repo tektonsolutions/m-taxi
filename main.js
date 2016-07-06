@@ -12,6 +12,8 @@ if(Meteor.isClient){
     }
   })
   Meteor.subscribe('taxis');
+  Meteor.subscribe('types');
+  Meteor.subscribe('drivers');
 }
 
 if(Meteor.isServer){

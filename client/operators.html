@@ -18,14 +18,17 @@
 						</tr>
 					</thead>
 					<tbody>
+						{{#each driver}}
 						<tr>
-							<td>Junjun</td>
-							<td>jj</td>
-							<td>20 Brgy Bliss Pungtod Cabatuan Iloilo</td>
-							<td>55.0</td>
-							<td>300</td>
-							<td>P23-52D</td>
+							<td>{{plateNo}}</td>
+							<td>{{taxiNo}}</td>
+							<td>{{brand}}</td>
+							<td>{{variant}}</td>
+							<td>{{type}}</td>
+							<td>{{currentOdo}}</td>
+							<td>{{year}}</td>
 						</tr>
+						{{/each}}
 					</tbody>
 				</table>
 				</div>

@@ -9,3 +9,7 @@ Meteor.publish("types", function(){
 Meteor.publish("taxis", function(){
   return Taxis.find({});
 });
+
+Meteor.publish("drivers", function(){
+  return Roles.getUsersInRole('driver');
+});

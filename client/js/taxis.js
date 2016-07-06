@@ -9,8 +9,6 @@ Template.addTaxi.events({
     taxiObj['year'] = $('#yearInput').val();
     taxiObj['brand'] = $('#brandInput').val();
     var call = Meteor.call('createTaxi', taxiObj);
-    console.log(call);
-
    }
 });
 Template.taxis.helpers({
