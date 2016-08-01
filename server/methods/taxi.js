@@ -2,7 +2,7 @@ Taxis._ensureIndex({plateNo: 1}, {unique: 1});
 
 Meteor.methods({
   'createTaxi': function(object){
-
+    console.log(object.currentOdo);
     check(object, Schema.Taxi);
     if(Meteor.myFunctions.isAdmin()){
       try {

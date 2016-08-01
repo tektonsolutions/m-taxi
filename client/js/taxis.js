@@ -3,12 +3,13 @@ Template.addTaxi.events({
     let taxiObj = {};
     taxiObj['plateNo'] = $('#plateInput').val();
     taxiObj['taxiNo'] = $('#taxiInput').val();
-    taxiObj['currentOdo'] = $('#odoInput').val();
+    taxiObj['currentOdo'] = parseInt($('#odoInput').val());
     taxiObj['type'] = $('#typeInput').val();
     taxiObj['variant'] = $('#variantInput').val();
     taxiObj['year'] = $('#yearInput').val();
     taxiObj['brand'] = $('#brandInput').val();
     var call = Meteor.call('createTaxi', taxiObj);
+    console.log(taxiObj);
    }
 });
 Template.taxis.helpers({

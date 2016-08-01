@@ -20,13 +20,12 @@
 					<tbody>
 						{{#each driver}}
 						<tr>
-							<td>{{plateNo}}</td>
-							<td>{{taxiNo}}</td>
-							<td>{{brand}}</td>
-							<td>{{variant}}</td>
-							<td>{{type}}</td>
-							<td>{{currentOdo}}</td>
-							<td>{{year}}</td>
+							<td>{{user.profile.name}}</td>
+							<td>{{user.username}}</td>
+							<td>{{user.profile.address}}</td>
+							<td>{{rentalBalance}}</td>
+							<td>{{refillBalance}}</td>
+							<td>{{taxi.plateNo}}</td>
 						</tr>
 						{{/each}}
 					</tbody>

@@ -11,5 +11,5 @@ Meteor.publish("taxis", function(){
 });
 
 Meteor.publish("drivers", function(){
-  return Roles.getUsersInRole('driver');
+  return Drivers.find({});
 });

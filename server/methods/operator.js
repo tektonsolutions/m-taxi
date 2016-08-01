@@ -6,6 +6,7 @@ Meteor.methods({
       try {
         var userId = Accounts.createUser(object);
         console.log(userId);
+        Roles.addUsersToRoles(userId, roles.driver.key);
         var user = Meteor.users.findOne({_id:userId});
         console.log(user);
         var driverObj = {};
